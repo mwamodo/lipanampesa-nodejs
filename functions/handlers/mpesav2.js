@@ -1,7 +1,6 @@
 const Mpesa = require('./mpesa');
 
-// New Instance. You can define more than once instance.
-const MpesaAPi = new Mpesa(
+const MpesaApi = new Mpesa(
   {
     consumerKey: '6YNv1oZB4r8LaFnfwjeZXtOOcuDaAkzQ',
     consumerSecret: 'FSGnYDnDq4AWbaWX',
@@ -12,12 +11,12 @@ const MpesaAPi = new Mpesa(
   })
 
 exports.testPayv2 =(req, res) => {
-  const senderMsisdn = 254707131702
-  amount = 1
+  const senderMsisdn = 254705287169
+  const amount = 1
   const callbackUrl = "https://us-central1-mpesa-functions.cloudfunctions.net/api/hooks/mpesa";
   const accountRef = Math.random().toString(35).substr(2, 7)
 
-  MpesaAPi
+  MpesaApi
     .lipaNaMpesaOnline(senderMsisdn, amount, callbackUrl, accountRef)
     .then(res => console.log(res))
     .catch(err => console.error(err))

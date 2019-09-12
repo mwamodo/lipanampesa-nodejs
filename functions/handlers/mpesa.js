@@ -16,7 +16,7 @@ class Mpesa {
     // this.security = () => {
     //   return security(this.configs.certPath, this.configs.securityCredential)
     // }
-    this.baseURL = `https://${this.enviroment === 'production' ? 'api' : 'sandbox'}.safaricom.co.ke`
+    this.baseURL = `https://${this.environment === 'production' ? 'api' : 'sandbox'}.safaricom.co.ke`
   }
 
   oAuth() {
