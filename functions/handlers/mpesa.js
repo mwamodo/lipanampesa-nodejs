@@ -1,4 +1,4 @@
-const { oAuth } = require('./endpoints');
+const { oAuth, lipaNaMpesaOnline } = require('./endpoints');
 const { request } = require('./helpers');
 
 /**
@@ -22,6 +22,10 @@ class Mpesa {
   oAuth() {
     const { consumerKey, consumerSecret } = this.configs
     return oAuth.bind(this)(consumerKey, consumerSecret)
+  }
+
+  lipaNaMpesaOnline() {
+    return lipaNaMpesaOnline.bind(this)(...arguments)
   }
 
 }
