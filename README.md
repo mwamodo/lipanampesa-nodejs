@@ -1,4 +1,4 @@
-# Mpesa Firebase Functions
+# Mpesa Functions
 
 ```js
 const app = require("express")();
